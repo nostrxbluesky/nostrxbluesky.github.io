@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostr X Bluesky</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Default layout: Three columns */
+        .column {
+            flex: 1 1 calc(33.33% - 2px);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        /* Rows inside each column */
+        .top, .bottom {
+            height: 50px;
+            background-color: #fff;
+            border: 0px solid #ddd;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .middle {
+            flex: 1; /* Fill remaining space */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .middle .box {
+            flex: 1; /* Equal height for both boxes */
+            background-color: #fff;
+            border: 0px solid #ccc;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .middle .box img {
+            width: auto; /* Maintain aspect ratio */
+            height: 100px; /* Fill the height of the container */
+            object-fit: cover; /* Ensure the image covers the container */
+            display: block; /* Prevent extra space below images */
+        }
+
+        /* Responsive: Change to rows under 1024px */
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: row; /* Switch main layout to rows */
+            }
+
+            .column {
+                flex: 1 1 100%; /* Full width for each row */
+                display: flex;
+            }
+
+            .top, .bottom {
+                width: 100%; /* Full width */
+                height: 50px; /* Fixed height */
+            }
+
+            .middle {
+                flex: 1; /* Fill remaining space */
+                display: flex;
+                flex-direction: row; /* Side-by-side boxes */
+            }
+
+            .middle .box {
+                flex: 1; /* Equal width and height */
+                height: auto; /* Adjust height to fit */
+            }
+            .column {
+                height: 33.33%;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Column 1 -->
+        <a href="bitcoin:bc1q3fzygjsr2mmhdgn54fav0cjfhj9jsqkdwvzhcf" class="column">
+        <div class="column">
+            <div class="top"><h3>Nostr</h3></div>
+            <div class="middle">
+                <div class="box" style="background-image: url(https://nostrxbluesky.github.io/n.png); background-repeat: no-repeat; background-size: contain; background-position: center;"></div>
+                <div class="box" style="background-image: url(https://nostrxbluesky.github.io/bc1q3fzygjsr2mmhdgn54fav0cjfhj9jsqkdwvzhcf.png); background-repeat: no-repeat; background-size: contain; background-position: center;"></div>
+            </div>
+            <div class="bottom">bc1q3fzygjsr2mmhdgn54fav0cjfhj9jsqkdwvzhcf</div>
+        </div>
+        </a>
+
+        <!-- Column 2 -->
+        <a href="bitcoin:bc1qqyl90lgd7t7pad6ysyffy5wze8cjyf6y4w3cxf" class="column">
+        <div class="column">
+            <div class="top"><h3>X</h3></div>
+            <div class="middle">
+                <div class="box" style="background-image: url(https://nostrxbluesky.github.io/x.png); background-repeat: no-repeat; background-size: contain; background-position: center;"></div>
+                <div class="box" style="background-image: url(https://nostrxbluesky.github.io/bc1qqyl90lgd7t7pad6ysyffy5wze8cjyf6y4w3cxf.png); background-repeat: no-repeat; background-size: contain; background-position: center;"></div>
+            </div>
+            <div class="bottom">bc1qqyl90lgd7t7pad6ysyffy5wze8cjyf6y4w3cxf</div>
+        </div>
+        </a>
+
+        <!-- Column 3 -->
+        <a href="bitcoin:bc1qr0xn26fy6v8sffz264wzp8r6eye95m7c7sdz7n" class="column">
+        <div class="column">
+            <div class="top"><h3>Bluesky</h3></div>
+            <div class="middle">
+                <div class="box" style="background-image: url(https://nostrxbluesky.github.io/b.png); background-repeat: no-repeat; background-size: contain; background-position: center;"></div>
+                <div class="box" style="background-image: url(https://nostrxbluesky.github.io/bc1qr0xn26fy6v8sffz264wzp8r6eye95m7c7sdz7n.png); background-repeat: no-repeat; background-size: contain; background-position: center;"></div>
+            </div>
+            <div class="bottom">bc1qr0xn26fy6v8sffz264wzp8r6eye95m7c7sdz7n</div>
+        </div>
+        </a>
+    </div>
+</body>
+</html>
+
